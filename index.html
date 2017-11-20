@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Dude-token</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-  <h1>Dude Token!!!!!</h1>
-  <img src="./dude-token.png" alt="">
-  <h2>Don't miss our ICO</h2  >
-  <h1 id="time-remaining">...</h1>
+  <div class="center">
+    <h1>Dude Token</h1>
+    <img class="image" src="./assets/images/dude-token.png" alt="">
+    <h2>Don't miss our ICO</h2  >
+    <h1 id="time-remaining">...</h1>
+  </div>
   <script>
     var countDownDate = new Date("Dec 15, 2017 15:37:25").getTime();
     
@@ -24,14 +27,12 @@
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Display the result in the element with id="demo"
       document.getElementById('time-remaining').innerHTML = days + 'd ' + hours + 'h '
       + minutes + 'm ' + seconds + 's ';
 
-      // If the count down is finished, write some text 
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("time-remaining").innerHTML = "EXPIRED";
+        document.getElementById('time-remaining').innerHTML = 'The ICO is over :(';
       }
     }, 1000);
   </script>
